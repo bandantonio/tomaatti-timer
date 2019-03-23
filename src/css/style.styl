@@ -1,0 +1,231 @@
+@font-face
+  font-family: font
+  src: url(../assets/fonts/tomaatti-font.woff)
+
+@font-face
+  font-family: digits
+  src: url(../assets/fonts/tomaatti-digits.woff)
+
+@font-face
+  font-family: glyphs
+  src: url(../assets/fonts/tomaatti-glyphs.woff)
+
+wrapper-height = 420px
+div-width = 320px
+main = #34495E
+dark-accent = #2C3E50
+accent-color = #4CAF50
+another-color = #202D3A
+reset-color = #F44336
+
+icon-settings = '\e803'
+icon-sound-on = '\e805'
+icon-sound-off = '\e804'
+icon-code = '\e807'
+icon-heart = '\e800'
+
+#wrapper
+  position: relative
+  width: div-width
+  margin: 0 auto
+  overflow: hidden
+
+.slider
+  position: absolute
+  left: -340px
+  width: div-width
+  height: 380px
+
+.slider.opened
+  transition: .5s
+  left: 0
+
+.slider.closed
+  transition: .5s
+  left: 350px
+
+#settings
+#sound
+  position: absolute
+  width: 15%
+  float: left
+  &:after
+    margin-right: 10px
+    text-decoration: none
+    color: #fff
+  &:hover
+    cursor pointer
+
+#settings
+  &:after
+    content: icon-settings
+    font-family: glyphs
+
+#sound
+  top: 35px
+
+#sound.on
+  &:after
+    content: icon-sound-on
+    font-family: glyphs
+
+#sound.off
+  &:after
+    content: icon-sound-off
+    font-family: glyphs
+
+#settings-block
+  display: block
+  margin: 0 auto
+  padding: 0 20px
+
+#settings-block label
+  font-family: font
+  font-size: 14px
+  color: #fff
+
+.settings-input
+  font-family digits
+  font-size: 16px
+  width: 90%
+  padding: 5px 10px
+  margin-bottom: 10px;
+
+.tomaatti-timer
+  width: div-width
+  float: left
+  overflow: hidden
+  height: wrapper-height
+  @media screen and (max-width: 750px)
+    float: left
+
+.tomaatti-timer
+.timer-controls
+.slider
+  padding: 10px 0
+  background-color: main
+
+.timer-table
+  padding: 35px 0 30px 0
+
+@-moz-document url-prefix()
+  .timer-table
+    padding: 35px 0 20px 0
+
+.title
+  font-family: font
+  color: #fff
+  padding-bottom: 20px
+
+.timer-table
+.tomaatti-timer span
+  font-family: digits
+  color: #fff
+  min-height: 70px
+  font-size: 270%
+
+#start-timer
+#reset-timer
+#save-settings
+#cancel
+input#sound-checkbox
+  background-color: main
+  border: 2px solid
+  color: #fff
+  padding: 15px 32px
+  text-decoration: none
+  outline: none
+  display: inline-block
+  font-size: 16px;
+
+#start-timer
+#save-settings
+  border-color: accent-color
+  &:hover
+    background-color: accent-color
+
+#reset-timer
+#cancel
+  border-color: reset-color
+  &:hover
+    background-color: reset-color
+
+.time-delimiter
+  position: relative
+  bottom: 0.1em
+
+#break-time
+  font-family font
+  font-size: 50%
+  color: #fff
+  padding: 5px
+  margin: 0 10px
+  border 2px solid accent-color
+  border-radius 5px
+  background-color: dark-accent
+  visibility hidden
+
+#timer-label
+  display: block
+  width: 80%
+  margin: 20px auto
+  padding: 5px 20px
+  height: 25px
+  color: #fff
+  outline none
+  &::placeholder
+    color: #fff
+  &:required
+    background-color dark-accent
+    border: none
+  &:invalid
+    background-color: reset-color
+  &:disabled
+    background-color: #989898
+
+#timer-label
+.timer-controls
+#start-timer
+#reset-timer
+#save-settings
+#cancel
+  font-family: font
+
+#timer-label
+.title
+.tomaatti-timer
+.timer-controls
+#settings-block label
+.settings-input
+#save-settings
+#cancel
+  text-align: center
+
+.credits
+  font-size: 0.8em
+  font-family: font
+  color: #fff
+
+.credits .code
+.credits .love
+  &:after
+    font-family: glyphs
+    margin: 0 3px
+    font-size .5em
+
+.credits .code
+  &:after
+    content: icon-code
+    color: #1ABC9C
+
+.credits .love
+  &:after
+    content: icon-heart
+    color: reset-color
+
+.credits a
+  color: #1ABC9C
+  text-decoration: none
+
+.credits a:hover
+  text-decoration underline

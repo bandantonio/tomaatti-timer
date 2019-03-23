@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="src/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/assets/icons/favicon-16x16.png">
+  <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+  <title>Tomaatti Timer</title>
+</head>
+<body>
+  <section id="wrapper">
+    <div class="tomaatti-timer">
+        <div id="settings"></div>
+        <div id="sound" class="on"></div>
+      <div class="title">Tomaatti Timer</div>
+      <div class="timer-table">
+        <span class="minutes">0</span>
+        <span class="time-delimiter">:</span>
+        <span class="seconds">0</span>
+        <div id="break-time">Break time!</div>
+      </div>
+      
+      <div class="timer-controls">
+        <input type="text" name="tomaatti-label" id="timer-label" placeholder="Name your Tomaatti" value="" required>
+        <input id="start-timer" type="button" value="Start">
+        <input id="reset-timer" type="reset" value="Reset">
+      </div>
+      <div class="credits"><a href="https://github.com/bandantonio/tomaatti-timer" target="blank"><span class="code"></span></a> with <span class="love"></span> by <a href="https://mister-gold.pro" target="blank" class="author">Antonio Zolotukhin</a></div>
+    </div>
+    
+    <section class="slider closed">
+      <div class="tomaatti-settings">
+        <div class="title">Settings</div>
+        <form id="settings-block">
+          <label for="cycle-length">Cycle duration (minutes)</label>
+          <input type="text" class="settings-input" name="cycle-length" id="cycle-length" placeholder="25" value=""><br />
+          <label for="short-break-length">Short break duration (minutes)</label>
+          <input type="text" class="settings-input" name="short-break-length" id="short-break-length" placeholder="5" value=""><br />
+          <label for="long-break-length">Long break duration (minutes)</label>
+          <input type="text" class="settings-input" name="long-break-length" id="long-break-length" placeholder="25" value=""><br />
+          <div class="timer-controls">
+            <input id="save-settings" type="button" value="Save">
+            <input id="cancel" type="button" value="Cancel">
+          </div>
+        </form>
+      </div>
+    </section>
+  </section>
+  
+  <script type="module" src="./src/js/index.js"></script>
+</body>
+</html>
