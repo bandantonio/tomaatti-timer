@@ -19,7 +19,10 @@ let helpers = (function () {
     timers.secondsSelector.innerHTML = String(seconds);
 
     milliseconds -= 1000;
-    if (ticking) tickingSound.play();
+    if (ticking) {
+      tickingSound.load();
+      tickingSound.play();
+    }
     
     timerID = setTimeout(countdown, 1000, milliseconds, ticking);
     
