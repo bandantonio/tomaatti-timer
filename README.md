@@ -4,13 +4,13 @@ Tomaatti (Finnish for tomato) is a Pomodoro timer :tomato: that makes it easier 
 
 ## What? :confused: Yet another stupid Pomodoro timer?
 
-Well, yes but not really :grinning:.
+Hey, it's not stupid at all! :grinning:. Just don't hesitate - give it a try. I bet, you will like it!
 
-There are not so many projects on GitHub with Pomodoro timers that don't force you to commit the murder of their authors after several minutes of use.
+There are not so many projects on GitHub with Pomodoro timers that force you to commit the murder of their authors after several minutes of use. After several days of investigation, I felt like I'm over it and I need something different.
 
 This project was born as the result of my stydying JavaScript and I expect it to grow into a fully-featured product, as my knowledge evolve. I have a more or less clear roadmap of incremental improvements :chart_with_upwards_trend: some of which should make a real difference and stand out :rocket: _Tomaatti Timer_ from the rest of existing Pomodoro timers (yeah, I guess your reaction :satisfied: :trollface:).
 
-The ultimate goal behind the idea of creating _Tomaatti Timer_ was not "yet another ephemeral Pomodoro timer" but rather a product with usefullness in mind, so that other people would like to use and can easily [contribute](#contributing) to. 
+The ultimate goal behind the idea of creating _Tomaatti Timer_ was not "yet another ephemeral Pomodoro timer" but rather a product with usefullness in mind, so that other people would like to use and can easily [contribute](#contributing) to.
 
 ## Getting started
 
@@ -37,7 +37,7 @@ Open your browser and navigate to `http://localhost:8088`.
 
 Bingo! :tada:
 
-### Screenshots :construction:
+### Screenshots
 
 ![Main Screen](showcase/1.png) ![Running Timer](showcase/2.png)
 
