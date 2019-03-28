@@ -72,10 +72,6 @@ Below is a plan for further improvements:
 1. Write documentation
 1. Refactor code to make it easier to follow
 
-## Known issues
-
-* Firefox incorrectly plays timer sound
-
 ## Contributing
 
 The project is on its early stages of development, so any kind of contribution (including :star:) is welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
