@@ -10,15 +10,18 @@ let breaks = (function() {
   let longBreakTime = 0;
   let isBreak = false;
   let breakTimeLabel = document.getElementById('break-time');
+  let breakStartSound = new Audio('./src/assets/audio/break-start.mp3');
+  let breakEndSound = new Audio('./src/assets/audio/break-end.mp3');
   
   function breakStarted() {
     tomaattiCycles += 1;
     isBreak = true;
     timer.setTimerState(false);
+    playBreakStartSound();
     breakTimeLabel.style.visibility = 'visible';
     setTimeout(() => {
       breakSelector();
-    }, 1000);
+    }, 3000);
   }
   
   function breakSelector() {
@@ -44,6 +47,7 @@ let breaks = (function() {
     timer.tomaattiLabel.removeAttribute('disabled');
     timer.startButton.style.display = 'initial';
     settings.disableSettingsPage(false);
+    playBreakEndSound();
     return timer.preset();
   }
 
@@ -73,6 +77,16 @@ let breaks = (function() {
   function setLongBreakTime(minutes) {
     longBreakTime = minutes;
     return longBreakTime;
+  }
+
+  function playBreakStartSound() {
+    breakStartSound.load();
+    breakStartSound.play();
+  }
+
+  function playBreakEndSound() {
+    breakEndSound.load();
+    breakEndSound.play();
   }
 
   return {
