@@ -47,7 +47,7 @@ let helpers = (function () {
   }
   
   let minutesToMilliseconds = function(minutes) {
-    return minutes * 1000;
+    return minutes * 60000;
   }
 
   let getTimeoutID = function() {

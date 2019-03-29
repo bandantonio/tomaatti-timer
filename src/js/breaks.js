@@ -17,7 +17,7 @@ let breaks = (function() {
     tomaattiCycles += 1;
     isBreak = true;
     timer.setTimerState(false);
-    playStartBreakSound();
+    playBreakStartSound();
     breakTimeLabel.style.visibility = 'visible';
     setTimeout(() => {
       breakSelector();
@@ -47,7 +47,7 @@ let breaks = (function() {
     timer.tomaattiLabel.removeAttribute('disabled');
     timer.startButton.style.display = 'initial';
     settings.disableSettingsPage(false);
-    playEndBreakSound();
+    playBreakEndSound();
     return timer.preset();
   }
 
@@ -79,12 +79,12 @@ let breaks = (function() {
     return longBreakTime;
   }
 
-  function playStartBreakSound() {
+  function playBreakStartSound() {
     breakStartSound.load();
     breakStartSound.play();
   }
 
-  function playEndBreakSound() {
+  function playBreakEndSound() {
     breakEndSound.load();
     breakEndSound.play();
   }
