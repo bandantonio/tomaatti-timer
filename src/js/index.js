@@ -17,6 +17,7 @@ let application = (function () {
 export default application;
 
 timer.startButton.addEventListener('click', timer.start);
+timer.pauseButton.addEventListener('click', timer.pause);
 timer.resetButton.addEventListener('click', timer.reset);
 document.addEventListener('DOMContentLoaded', application.init);
 

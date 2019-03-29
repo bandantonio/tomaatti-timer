@@ -17,8 +17,10 @@ let helpers = (function () {
     
     timers.minutesSelector.innerHTML = String(minutes);
     timers.secondsSelector.innerHTML = String(seconds);
+    timers.setTimeOnPause(milliseconds);
 
     milliseconds -= 1000;
+    
     if (ticking) {
       tickingSound.load();
       tickingSound.play();
