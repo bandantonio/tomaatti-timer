@@ -17,6 +17,7 @@ dark-accent = #2C3E50
 accent-color = #4CAF50
 another-color = #202D3A
 reset-color = #F44336
+pause-color = #F2BB05
 
 icon-settings = '\e803'
 icon-sound-on = '\e805'
@@ -125,6 +126,7 @@ icon-heart = '\e800'
   font-size: 270%
 
 #start-timer
+#pause-timer
 #reset-timer
 #save-settings
 #cancel
@@ -143,6 +145,12 @@ input#sound-checkbox
   border-color: accent-color
   &:hover
     background-color: accent-color
+
+#pause-timer
+  display: none
+  border-color: pause-color
+  &:hover
+    background-color: pause-color
 
 #reset-timer
 #cancel
@@ -186,6 +194,7 @@ input#sound-checkbox
 #timer-label
 .timer-controls
 #start-timer
+#pause-timer
 #reset-timer
 #save-settings
 #cancel

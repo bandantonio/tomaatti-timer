@@ -39,22 +39,27 @@ Bingo! :tada:
 
 ### Screenshots
 
-![Main Screen](showcase/1.png) ![Running Timer](showcase/2.png)
-
-![Break Time](showcase/3.png) ![Settings](showcase/4.png)
+ **Main screen** | **Running Timer**
+-----------------|------------------
+![Main Screen](showcase/1.png) | ![Running Timer](showcase/2.png)
+ **Paused Timer** | **Running Timer**
+![Paused Timer](showcase/3.png) | ![Break Time](showcase/4.png)
+ **Settings** | **Applied new settings** |
+![Settings](showcase/5.png) | ![Applied new settings](showcase/6.png)
 
 ### Features
 
-The initial version (0.1.0) of the Tomaatti Timer has the following features:
+The current list of features includes:
 
 * configurable timer intervals (cycle, short and long breaks)
+* pause functionality
 * ticking sound (optional)
 
 ### Roadmap
 
 Below is a plan for further improvements:
 
-1. Pause functionality :question:
+1. ~~Pause functionality~~ (implemented in #3)
 1. Sounds for start/end of each cycle
 1. Popup notifications
 1. Keyboard shortcuts
