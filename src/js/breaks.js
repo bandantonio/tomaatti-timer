@@ -10,14 +10,14 @@ let breaks = (function() {
   let longBreakTime = 0;
   let isBreak = false;
   let breakTimeLabel = document.getElementById('break-time');
-  let cycleStartSound = new Audio('./src/assets/audio/cycle-start.mp3');
-  let cycleEndSound = new Audio('./src/assets/audio/cycle-end.mp3');
+  let breakStartSound = new Audio('./src/assets/audio/break-start.mp3');
+  let breakEndSound = new Audio('./src/assets/audio/break-end.mp3');
   
   function breakStarted() {
     tomaattiCycles += 1;
     isBreak = true;
     timer.setTimerState(false);
-    playStartCycleSound();
+    playStartBreakSound();
     breakTimeLabel.style.visibility = 'visible';
     setTimeout(() => {
       breakSelector();
@@ -47,7 +47,7 @@ let breaks = (function() {
     timer.tomaattiLabel.removeAttribute('disabled');
     timer.startButton.style.display = 'initial';
     settings.disableSettingsPage(false);
-    playEndCycleSound();
+    playEndBreakSound();
     return timer.preset();
   }
 
@@ -79,14 +79,14 @@ let breaks = (function() {
     return longBreakTime;
   }
 
-  function playStartCycleSound() {
-    cycleStartSound.load();
-    cycleStartSound.play();
+  function playStartBreakSound() {
+    breakStartSound.load();
+    breakStartSound.play();
   }
 
-  function playEndCycleSound() {
-    cycleEndSound.load();
-    cycleEndSound.play();
+  function playEndBreakSound() {
+    breakEndSound.load();
+    breakEndSound.play();
   }
 
   return {
