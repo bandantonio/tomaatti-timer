@@ -4,7 +4,7 @@
   "description": "Dead simple Pomodoro timer",
   "main": "main.js",
   "scripts": {
-    "styles": "stylus src/css/style.styl --out src/css/style.css --compress",
+    "styles": "stylus src/css/style.styl --out src/css/style.min.css --compress",
     "serve": "serve -p 8088"
   },
   "author": "Anton Zolotukhin <zolotuhin87@gmail.com> (https://mister-gold.pro)",
