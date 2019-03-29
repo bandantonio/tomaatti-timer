@@ -57,25 +57,11 @@ The current list of features includes:
 
 ### Roadmap
 
-Below is a plan for further improvements:
-
-1. ~~Pause functionality~~ (implemented in [#5](https://github.com/bandantonio/tomaatti-timer/pull/5))
-1. Sounds for start/end of each cycle
-1. Popup notifications
-1. Keyboard shortcuts
-1. List of completed tomaatti :question:
-1. Set goals
-1. Statistics (total number of completed cycles)
-1. Number of pauses
-1. Themes
-1. Applications
-1. Integrations
+You can see a plan for further improvements [here](https://github.com/bandantonio/tomaatti-timer/projects/1#column-4831830).
 
 ### Technical improvements
 
-1. Write tests (unit, integration, e2e)
-1. Write documentation
-1. Refactor code to make it easier to follow
+You can see a plan for further *technical* improvements [here](https://github.com/bandantonio/tomaatti-timer/projects/1#column-4899430).
 
 ## Contributing
 
