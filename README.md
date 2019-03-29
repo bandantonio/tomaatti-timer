@@ -42,7 +42,7 @@ Bingo! :tada:
  **Main screen** | **Running Timer**
 -----------------|------------------
 ![Main Screen](showcase/1.png) | ![Running Timer](showcase/2.png)
- **Paused Timer** | **Running Timer**
+ **Paused Timer** | **Break Time**
 ![Paused Timer](showcase/3.png) | ![Break Time](showcase/4.png)
  **Settings** | **Applied new settings** |
 ![Settings](showcase/5.png) | ![Applied new settings](showcase/6.png)
@@ -59,7 +59,7 @@ The current list of features includes:
 
 Below is a plan for further improvements:
 
-1. ~~Pause functionality~~ (implemented in #3)
+1. ~~Pause functionality~~ (implemented in [#5](https://github.com/bandantonio/tomaatti-timer/pull/5))
 1. Sounds for start/end of each cycle
 1. Popup notifications
 1. Keyboard shortcuts
