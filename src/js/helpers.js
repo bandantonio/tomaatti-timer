@@ -48,7 +48,7 @@ function countdown(milliseconds) {
 }  
 
 function minutesToMilliseconds(minutes) {
-  return minutes * 1000;
+  return minutes * 60000;
 }
 
 function getTimeoutID() {
