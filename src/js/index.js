@@ -1,27 +1,18 @@
 'use strict';
 
-import timer from './timer-controls.js';
-import settings from './settings.js';
+import * as controls from './controls.js';
+import * as settings from './settings.js';
 
-let application = (function () {
-  function init() {
-    timer.preset();
-    settings.preload();
-  }
-  
-  return {
-    init: init,
-  }
-}());
+function initiateTimer() {
+  settings.preloadStoredSettings();
+}
 
-export default application;
+controls.startButton.addEventListener('click', controls.startTimer);
+controls.pauseButton.addEventListener('click', controls.pauseTimer);
+controls.resetButton.addEventListener('click', controls.resetTimer);
+document.addEventListener('DOMContentLoaded', initiateTimer);
 
-timer.startButton.addEventListener('click', timer.start);
-timer.pauseButton.addEventListener('click', timer.pause);
-timer.resetButton.addEventListener('click', timer.reset);
-document.addEventListener('DOMContentLoaded', application.init);
-
-settings.toggleSettingsPage.addEventListener('click', settings.openSettingsPage);
-settings.toggleSoundSetting.addEventListener('click', settings.toggleSound);
-settings.saveSettingsButton.addEventListener('click', settings.save);
+settings.toggleSettingsPageIcon.addEventListener('click', settings.openSettingsPage);
+settings.toggleSoundSettingIcon.addEventListener('click', settings.toggleSound);
+settings.saveSettingsButton.addEventListener('click', settings.saveSettings);
 settings.cancelSettingsButton.addEventListener('click', settings.closeSettingsPage);

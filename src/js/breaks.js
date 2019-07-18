@@ -1,109 +1,110 @@
 'use strict';
 
-import timer from './timer-controls.js';
-import helpers from './helpers.js';
-import settings from './settings.js';
+import * as controls from './controls.js';
+import * as helpers from './helpers.js';
+import * as settings from './settings.js';
 
-let breaks = (function() {
-  let tomaattiCycles = 0;
-  let shortBreakTime = 0;
-  let longBreakTime = 0;
-  let isBreak = false;
-  let breakTimeLabel = document.getElementById('break-time');
-  let breakStartSound = new Audio('./src/assets/audio/break-start.mp3');
-  let breakEndSound = new Audio('./src/assets/audio/break-end.mp3');
-  
-  function breakStarted() {
-    tomaattiCycles += 1;
-    isBreak = true;
-    timer.setTimerState(false);
+let tomaattiCycles = 0;
+let shortBreakTime = 2;
+let longBreakTime = 3;
+let isBreak = false;
+
+let breakTimeLabel = document.getElementById('break-time');
+let breakStartSound = new Audio('./src/assets/audio/break-start.mp3');
+let breakEndSound = new Audio('./src/assets/audio/break-end.mp3');
+
+function breakStarted(ticking) {
+  console.log(ticking, "state")
+  tomaattiCycles += 1;
+  setBreakState(true);
+  controls.isTimerRunning(false);
+  if (ticking) {
     playBreakStartSound();
-    breakTimeLabel.style.visibility = 'visible';
-    setTimeout(() => {
-      breakSelector();
-    }, 3000);
   }
-  
-  function breakSelector() {
-    if (tomaattiCycles < 4) {
-      return short();
-    } else {
-      return long();
-    }
+  breakTimeLabel.style.visibility = 'visible';
+  setTimeout(() => {
+    breakSelector();
+  }, 3000);
+}
+
+function breakSelector() {
+  if (tomaattiCycles < 4) {
+    return short();
+  } else {
+    return long();
   }
-  
-  function short() {
-    helpers.countdown(helpers.minToMsec(shortBreakTime));
-  }
-  
-  function long() {
-    tomaattiCycles = 0;
-    helpers.countdown(helpers.minToMsec(longBreakTime));
-  }
-  
-  function breakFinished() {
-    isBreak = false;
-    breakTimeLabel.style.visibility = 'hidden';
-    timer.tomaattiLabel.removeAttribute('disabled');
-    timer.startButton.style.display = 'initial';
-    settings.disableSettingsPage(false);
+}
+
+function short() {
+  helpers.countdown(helpers.minutesToMilliseconds(shortBreakTime));
+}
+
+function long() {
+  resetTomaattiCycles();
+  helpers.countdown(helpers.minutesToMilliseconds(longBreakTime));
+}
+
+function breakFinished(ticking) {
+  isBreak = false;
+  breakTimeLabel.style.visibility = 'hidden';
+  controls.tomaattiLabel.removeAttribute('disabled');
+  controls.startButton.style.display = 'initial';
+  settings.disableSettingsPage(false);
+  if (ticking) {
     playBreakEndSound();
-    return timer.preset();
   }
+  return controls.presetTimer();
+}
 
-  function getBreakState() {
-    return isBreak;
-  }
+function getBreakState() {
+  return isBreak;
+}
+
+function setBreakState(state) {
+  isBreak = state;
+  return isBreak;
+}
+
+function resetTomaattiCycles() {
+  tomaattiCycles = 0;
+  return tomaattiCycles;
+}
+
+function getShortBreakTime() {
+  return shortBreakTime;
   
-  function setBreakState(state) {
-    isBreak = state;
-    return isBreak;
-  }
-  
-  function getShortBreakTime() {
-    return shortBreakTime;
+}
 
-  }
+function setShortBreakTime(minutes) {
+  shortBreakTime = minutes;
+  return shortBreakTime;
+}
 
-  function setShortBreakTime(minutes) {
-    shortBreakTime = minutes;
-    return shortBreakTime;
-  }
+function getLongBreakTime() {
+  return longBreakTime;
+}
 
-  function getLongBreakTime() {
-    return longBreakTime;
-  }
+function setLongBreakTime(minutes) {
+  longBreakTime = minutes;
+  return longBreakTime;
+}
 
-  function setLongBreakTime(minutes) {
-    longBreakTime = minutes;
-    return longBreakTime;
-  }
+function playBreakStartSound() {
+  breakStartSound.load();
+  breakStartSound.play();
+}
 
-  function playBreakStartSound() {
-    breakStartSound.load();
-    breakStartSound.play();
-  }
+function playBreakEndSound() {
+  breakEndSound.load();
+  breakEndSound.play();
+}
 
-  function playBreakEndSound() {
-    breakEndSound.load();
-    breakEndSound.play();
-  }
-
-  return {
-    breakSelector: breakSelector,
-    short: short,
-    long: long,
-    tomaattiCycles: tomaattiCycles,
-    breakTimeLabel: breakTimeLabel,
-    getShortBreakTime: getShortBreakTime,
-    setShortBreakTime: setShortBreakTime,
-    getLongBreakTime: getLongBreakTime,
-    setLongBreakTime: setLongBreakTime,
-    started: breakStarted,
-    finished: breakFinished,
-    getBreakState: getBreakState,
-    setBreakState: setBreakState
-  }
-}());
-
-export default breaks;
+export {
+  getBreakState,
+  setBreakState,
+  setShortBreakTime,
+  setLongBreakTime,
+  breakStarted,
+  breakFinished,
+  breakTimeLabel
+}
