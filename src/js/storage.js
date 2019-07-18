@@ -1,50 +1,51 @@
 'use strict';
 
-let storage = (function() {
-  let storageData = {
-    cycleDuration: 25,
-    shortBreakDuration: 5,
-    longBreakDuration: 25,
-    soundEnabled: true
-  };
-  
-  function pull() {
-    if (!localStorage.getItem('tomaatti-timer')) {
-      localStorage.setItem('tomaatti-timer', JSON.stringify(storageData));
-    }
-    return JSON.parse(localStorage.getItem('tomaatti-timer'));
-  }
-  
-  function save(settings) {
-    for (let key in settings) {
-      if (storageData.hasOwnProperty(key)) {
-        storageData[key] = settings[key];
-      }
-    }
-    pushToStorage();
-  }
-  
-  function pushToStorage() {
+let storageData = {
+  cycleDuration: 25,
+  shortBreakDuration: 5,
+  longBreakDuration: 25,
+  soundEnabled: true
+};
+
+function pullSettingsFromStorage() {
+  if (!localStorage.getItem('tomaatti-timer')) {
     localStorage.setItem('tomaatti-timer', JSON.stringify(storageData));
-    return pull();
   }
+  return JSON.parse(localStorage.getItem('tomaatti-timer'));
+}
 
-  function getSoundState() {
-    return storageData.soundEnabled;
+function saveSettings(settings) {
+  for (let key in settings) {
+    if (storageData.hasOwnProperty(key)) {
+      storageData[key] = settings[key];
+    }
   }
+  pushSettingsToStorage();
+}
 
-  function saveSoundState(state) {
-    storageData.soundEnabled = state;
-    pushToStorage();
-  }
-  
-  return {
-    pull: pull,
-    save: save,
-    push: pushToStorage,
-    getSoundState: getSoundState,
-    saveSoundState: saveSoundState
-  }
-}());
+function pushSettingsToStorage() {
+  localStorage.setItem('tomaatti-timer', JSON.stringify(storageData));
+  return pullSettingsFromStorage();
+}
 
-export default storage;
+function getCycleDuration() {
+  return storageData.cycleDuration;
+}
+
+function getSoundState() {
+  return storageData.soundEnabled;
+}
+
+function saveSoundState(state) {
+  storageData.soundEnabled = state;
+  pushSettingsToStorage();
+}
+
+export {
+  pullSettingsFromStorage,
+  saveSettings,
+  pushSettingsToStorage,
+  getCycleDuration,
+  getSoundState,
+  saveSoundState,
+};
