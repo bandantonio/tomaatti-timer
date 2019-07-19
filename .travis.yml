@@ -1,10 +1,13 @@
 language: node_js
 node_js:
-  - "stable"
-  
+- stable
 install:
-  - npm install
-  
+- npm install
 cache:
   directories:
-    - "node_modules"
+  - node_modules
+notifications:
+  slack:
+    rooms:
+      - secure: IEolqhdxUdMcVVUeLtTA0TS6TjP8i3BWeu0yQKQ8xoOmI5K9SZnCCTsSGdVUrdVRLyQzBDjEUrSabU12vVxlqDxI0om8+gZ+Ysdw/cH9d64DbiNlYiZsXYMYvekNEocodWN0/hd/BGd5hTPZEIHlwZhPxAPpYaFe21jr8LAxGPyfwlcwyeh9Kk7/LYgfrSVfSh6NNVlua5PQEnOxV7OxRE+CRAitPxecenkIYH3aTkSKcVgBjjYt092Gb65cyAGu9/284FiU8G6wVZjLW3kwkyzChZlwMcKOv4ImTtj9I8WajpmOUQlGzVhDB4pKAEhX3jKvyL8mA3sntF0Q2hA9HtBfCHCDGVWKxQ5PPrI88iripckmkrg4WXzHJ5xoJRkDzgmH59+QEtlqPdKYyGCTxRjyG05mYbmgxsCZRJ40eXVR8oU2FjKUT6B0OGy8M6qhrBC/IjnrkimwZ7orh+ob57ytktMUgxsTsBAJTacmgcGl/T89QPEW+QBLgRNEW10sDK5nmukuZQKsz7NwpQcujdrzvIn/MV/vK2NNLPj+AEhfysPggp6B6lnE753+slp1m+BIk8bzI+OIohbZoGLOmTrWz4iCbhQYyMuSHTnVlS3TmteTUQBQS187eNGjvroZaQgXoUGFFrkQgeiIDFxcBIQjAMhG9mBDnMAJHotI5n4=
+    on_success: always
