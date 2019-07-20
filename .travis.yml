@@ -9,12 +9,4 @@ cache:
 notifications:
   email: true
   slack:
-    rooms:
-      secure: jNV3GxIhp7vnWgtiu7En8q0DHiiT98agxHMvA871t99u3eHdUe/GR4BzgSuw7igL2NEn+NV7xXuB5wlg/0nGgrUThh9wDfU343jVGW0Cs6wzk4mHZFFntsFGYOftLc/dqArtrr5Mrpq57Yw1P0mNDdtxzyexiMfHqlY22IGL7GIwFw7arveLSJykLKwlxbu/4eUnl9zh6cGzr7JycD7S/Hpc8SXVV+V0RYyWQD4oTDaqKunJ0uLdH1D31KqFVyuCJeNU9euAXnni7hTghvpzpT6baz5RZX6Gzmn8RsfQNBfxldO5N2eZ6ECre862GMn++uPxAvtlpmnRkWS4qeMJYzKU66tLrbhLQPmMSL+ZeaAOvybWo7gsRphNonX6ymMijwQAMghe73inbucg8todi4sW9u4wYjtewgILZhQci9ujhm7XNUFsEOUaC4MmjwLx08pwZAIrXNUgdz4YlbJLC+OESFe2ibLQ6WSjdn4Bl7q3je6Goz807Z/3RDi+ShUqsbY7SUiAfmdp5XMxNf2RoiBKbjs58Tz5L+XqauHK149BerR9wfEgElMyBd7r34WIa2/cp6dABkU1w2R21Wi5m7V695p1qUdKaw3nbtOhyzEanZLSrp/0RVGWJo2k4l5butTbNkuJlteblnc+hFnIDIi0Dxaj3K5T+VpRx9HWWtE=
-    on_success: always
-    on_failure: always
-    template:
-    - "**%{repository_slug}**, branch: `%{branch}`"
-    - 'Build: <%{build_url}|#%{build_number}>), commit: (%{commit})'
-    - 'Status: `%{result}` after *%{duration}*'
-    - 'Author: _%{author}_'
+    secure: wtTdt6RwTUv5woNPlcovoHSJzmusj5o+Az1Sl6bEZVJnM9paD+Pc7Hk4yHPFNMoG0NJkugAYECP5FWs1Mi5TluxKK6dV14GW3IGSdZMd+jpdlZZFEuLPdwUGNARPLLCn4Fo3j+aQAooOcm0aK15FkA3vHmv7zX7saQncwGBqw3m683lAhu9Q7SXK/8s0mYOlgv6wwAQteCjhnKPYd6z6D+4mqpT62+y6qKdi1BMp4maoMKbAkNmDzIOonJcbuvATz9SCuQGi2QW09Ma3ebsw4ieOiVqsvdcaedA+omRZNt6y+oQFvBfWzGE2IzAH69vM8Cz8c878LI579AfI33kBbODGlE9xe7bk6xZ33NJ7lMAhM6VKiZJ5jqS2GJV0uI6ulhtQb4sQ+9ds5gWwk2IJpauV8FNX65rz/TUKfnrtCGxWIj2bWv4FB8dRrTFtwV9BBntuJuHwvFYhh5DGU/E1uGe3tMG5KtJ23/Gav+ayTH0CI5Xf8Yv5B59P9JGpm+mDJ2SAXhALsx7H5SDqHzWYxcZntLwdrygIASHhakOuAQaVke/L/YfXjfTfR71SES5a1dzGQwWkn8zq6YzbedyJjllRKyonxcPsrqQ34wKjJti/Og4v1Dajgv1FC9WY3ACtnnt8PTegdT5TnjvRrOLBX/ppNIWAMVsFoDzoC9PvMP0=
