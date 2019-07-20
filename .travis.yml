@@ -10,11 +10,11 @@ notifications:
   email: true
   slack:
     rooms:
-      secure: z08qgAg6YXPI3v+VS1Gq2sh+JwjxRZbD9ZRH6Fc2CGOMjeMIXVeqV1N+GTbFOnDxAxHEtSRa9e4RI8h5QFo+aBF2gOFoL7yEKG5UwXSooDpAGkeCGTMOoP9WI+4N+uQawR/A2N2PhCHWFD20a70U3uxeFGlt2X7B9Mf54YAGQJp7g3nTQMw0l9VJGhwenceNuKWv4rQGXg1DamQjW+33iUx4SQnzYJcwlvcwWxNyKR92n06wzDLWhGiaWhfU7rJMN8NfGf84rmRCOyS0q/2CL4xMg/Z1ViFsFpKdb/Fi5QNLnkf41GLy1GuWbjiLYSerrqYiz/LIb3ocOXKdSfSRdAu9bKugl1OVC9bimnFV865otrAGg0WqWq6q+xDaRzSb9sKniRmGad+Y3JPz6VQVLrEq75MKZt6kYo4guAq1Q9dS93Njfr2Vd1z5vkupr9IwyoUgnK6WyIdHx0WeKjTi4i4JbLtDh3YqXZbSfbFjSrIimXSBKVE6azK5Sxb/PkcYGvMYUpoJp6xhLR1bSXlrzRTn9ERF/zte2Ul1zcMczyriGXma4T4YnC7jZsQG8zl18pswRfFIL6PysRnUOObFydGt1syFUDbzCSlQTkrPs9w2dyGEl4kn5sKao0VrVKGdwpOou+fgA1D+wCxAON2qJlEFSucKp3QqOBTtHZpDaLU=
+      secure: jNV3GxIhp7vnWgtiu7En8q0DHiiT98agxHMvA871t99u3eHdUe/GR4BzgSuw7igL2NEn+NV7xXuB5wlg/0nGgrUThh9wDfU343jVGW0Cs6wzk4mHZFFntsFGYOftLc/dqArtrr5Mrpq57Yw1P0mNDdtxzyexiMfHqlY22IGL7GIwFw7arveLSJykLKwlxbu/4eUnl9zh6cGzr7JycD7S/Hpc8SXVV+V0RYyWQD4oTDaqKunJ0uLdH1D31KqFVyuCJeNU9euAXnni7hTghvpzpT6baz5RZX6Gzmn8RsfQNBfxldO5N2eZ6ECre862GMn++uPxAvtlpmnRkWS4qeMJYzKU66tLrbhLQPmMSL+ZeaAOvybWo7gsRphNonX6ymMijwQAMghe73inbucg8todi4sW9u4wYjtewgILZhQci9ujhm7XNUFsEOUaC4MmjwLx08pwZAIrXNUgdz4YlbJLC+OESFe2ibLQ6WSjdn4Bl7q3je6Goz807Z/3RDi+ShUqsbY7SUiAfmdp5XMxNf2RoiBKbjs58Tz5L+XqauHK149BerR9wfEgElMyBd7r34WIa2/cp6dABkU1w2R21Wi5m7V695p1qUdKaw3nbtOhyzEanZLSrp/0RVGWJo2k4l5butTbNkuJlteblnc+hFnIDIi0Dxaj3K5T+VpRx9HWWtE=
     on_success: always
     on_failure: always
     template:
-    - '**%{repository_slug}**, branch: `%{branch}`'
+    - "**%{repository_slug}**, branch: `%{branch}`"
     - 'Build: <%{build_url}|#%{build_number}>), commit: (%{commit})'
     - 'Status: `%{result}` after *%{duration}*'
     - 'Author: _%{author}_'
