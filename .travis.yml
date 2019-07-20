@@ -14,3 +14,4 @@ notifications:
       - "Build <%{build_url}|#%{build_number}>), commit: (%{commit})"
       - "Status: `%{result}` after *%{duration}*"
       - "Author: _%{author}_"
+    on_success: always
