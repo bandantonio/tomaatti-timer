@@ -8,10 +8,10 @@ cache:
   - node_modules
 notifications:
   slack:
-    secure: xjvoniGWaZaBcX8awjx6VapW9HiyClzkRs4F6rmJd53GI64BKeSI699zTEMvFn4UFSXDeRgc4dtu4guLP+3M6+P8nbbxZVXO+dTlOcvQyscFdR1Li3zPsi11pHpQC9NzSKnHarTIB1Z5TB264XSL1IF99IppiRlQwGClooRUESfzWdDPEtgOC9CYcuZdQyJk20+H1TENaGrbmaa20o09zO70C1RueeaIp9ZrNJEKcxTMAGVLNXRQe3FeKYQhm1pLWrvI/eRgpfeID3AtklJVOVEOdBi8TCEOZyDgdrvGSm9l7wlAbqxsXRWyksfgHqCMgxTOo1k7aQqep2aveOK+EqvxkS63sGLUb5RvMVfYtX8oTTr9MY9KT2M4I1qli0A6ad30BMlX1xftl2myV8yXELeZieoA2IKnSmkCNtqcJHYWTsqA81UWmwxwZ4IAq8sajjVOhU0heTVcokYZndjSP1ez1zfm3dEU/wVZlO9EEq0vC4siqpxaxn3NOiHikj4rkfFWH2b4sZxAWUCcVhGBboGr6XfQSYWHqg4kWNAEjEglQBRroCgJyUraUtL6LcsFomGmzqhvqe8Q70BJlWxE+f1lnUpJQ5kWWr49bRIbQ/alBUfeA+JlHVCYumaDeiYtvZpFvgtr0FSH/tFWnXAlMqgwEa3YPQ7Hc5+9l+F3oG8=
     template:
       - "**%{repository_slug}, branch: `%{branch}`"
       - "Build <%{build_url}|#%{build_number}>), commit: (%{commit})"
       - "Status: `%{result}` after *%{duration}*"
       - "Author: _%{author}_"
     on_success: always
+    secure: ovj5F6pNptV+DjXcvzKRZAuLyXsNC4XBoSqohciqwaSKShZofDhhLbkoSK3h6UwDE2PxOFlXzeR/Q9/8/Bw/2grdFzLpNvtibSB59aiIiY+/UCMj3fzS4A8BnRqZrwVNaFeZYj4UzVVVmFgOsr2Zohw09ljqRimniTensMINqfv7QYUaJ05QMxT5eSA0Ou0JaLcw5atAARBxfKL6q0fcAFW+VbI9j7MHCFtVLuP7pGin7GwPbwWdjcnQnEuRpNwDUyK685ttuCmjR16JqZ8FM2EujkzswJMBgm7ONahG9jRGyM1D2DZr89kgtT1OqNcsvuotF3DTrsrWxS96wUzjwuliP1B/jxISZPjdHazZNTPVcQ7Gt75P3Ro2BuJCTJ9Y1U0+SgBy9U1tMZ38ZCS8obqFzAWQ6F1lVhIqjlPq7aNTiF5e0gsS9A/HZQogIIU7lJ9SRnZXAnuwSt1giTnBlPVbCuq+foOAl+VivwPGBWOv70lGcwoEcv46I5u48fPqK8OTHngqpNsT5NjVIRaaJb60yXh2UTGX6lO53fSK9DFy01rRdWZaO30Qk+MyylO21fG/1D3ps4qZnJL7J9vP9IijYx74I4SqG+AMaRrSz++6FdZA7ZsA/QQiFBoaaNksosV7zYDgZHQy4i9x5s/dgKFTcOUtN3CPCRwoM78/w74=
