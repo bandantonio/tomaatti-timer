@@ -6,3 +6,10 @@ install:
 cache:
   directories:
   - node_modules
+notifications:
+  email: true
+  slack:
+    rooms:
+      - secure: rs1cHNJOWZx5GM8Wb0VzX3X+e5x90Loujv94NQBvn811W94BUozako73Rwd8gs73joqCbDrqfFRmPmd1EtKLSBNqtYpHjgb1kKAl8eZsuyqL8oabLEEG72wBGN/sLU0fqJAYioMbYH1WtYjySxUQiJDIuZDpU9KrPw8aRJE+WFS0diZoL3m+v4e1r2Mrl1XpQNVhelnIRu7JNxfomqXRPl7gOG6fdZEA4IR+5L1niVjZacRo2Qa1/iNoBVkOL+SXs3nzBLFQIU2iKZBrXr9wNLH6cWioaBJyEiyhHaJDPzKockDozUKCw60s9fmhspuodtMVFUvTfGJi+cVvZPlzyFcc9zLFgezrPZhfW8uV4i5bsDFa2OegISB1SS+NS8imQq1kL6CuIIMw+Itx9mLuewYzVLng0L6zSundD4XTSwLJWkEPeOWA/PyVsQYQQM2sglKwoe2/x5v7+eQYL/ESx0eP3Zj5pUj10UM/O1Qe9ZC2ray+vVNX8W2qGfiCZR651myFZHLGszzMOM+fM3JjbfWUU6hj629lBQz7eUq41jYuU8EK2taDXGyiRsmEtdZyyNnxY+AtD+6Ju24Votz68k+B9Wav2+gxJA24ThU5rSKb/DCDRMJX/f2JPTj8nMrgNQZoQS6DejXvtXxbWinSqcWMiReyxLbHmVg4jb+UDn8=
+    on_success: always
+    on_failure: always
