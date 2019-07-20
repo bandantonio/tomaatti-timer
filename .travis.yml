@@ -6,15 +6,3 @@ install:
 cache:
   directories:
   - node_modules
-notifications:
-  email: true
-  slack:
-    rooms:
-      - secure: Zh1taA3FFn2QuWduO+FuNXb9HgYaROQbz3n9M13RJEsKdeQE3/rtGLe5ciGWQykWmcfeXlLjDPn/asDRgsBICjxXjWKf8UWCAmhaj+G4iAmMMilnrxJ8fumVCl37BfrHX64H7AkF+7GT3ZCinYGrGY45o9NJSrzES6muTVsbUfiR9C8jjH+0xnyJRa8beS5reJjcmDhICj/8h+65mWEdTYbaSd2ACEHZnEuDFroRatWjuGHIPmnmziYF8dGQizA9OkgArQOhIwsBHm2cBiA//KvBWR5VQWMThdNsKlS6lP2wTbnzF1rjhKbySikLz3NK82ztJynE2HYJBl9g0BYzoIblxGPjGrZp1TEYP2aGBULA48yK2sx4fOSxAT6SR0Pk20O3LLLP6E5agfGOG6MsmTdNJYnK99XVMqcx1y1inZAonaShm3sW9po8B3WzhDO0AsBczN/OwrBMSlj1X2V3EOQ6ch0nDPQAkj/EP5LiWwuUmxpQJgJN+/2GTmGJJZKR55zptTgbR9Mf5PGT5nP4inuxgpwK5RVzTTKOQDN7fuyJZORsJrE0JE4s/yHteZ9OocjTHV2rN6Z749m8VbwTWF26KP4NiwUNDK4lM+3ZE71UqAeX6fKXiUBK47Ld70ChGTKDOPlAJ2ZEZNCxqrQ0SLZyADbxRA+f7/KP6LgATLs=
-    on_success: always
-    on_failure: always
-    template:
-      - "**%{repository_slug}, branch: `%{branch}`"
-      - "Build <%{build_url}|#%{build_number}>), commit: (%{commit})"
-      - "Status: `%{result}` after *%{duration}*"
-      - "Author: _%{author}_"
