@@ -7,10 +7,12 @@ cache:
   directories:
   - node_modules
 notifications:
+  email: true
   slack:
     rooms:
       - secure: "ovj5F6pNptV+DjXcvzKRZAuLyXsNC4XBoSqohciqwaSKShZofDhhLbkoSK3h6UwDE2PxOFlXzeR/Q9/8/Bw/2grdFzLpNvtibSB59aiIiY+/UCMj3fzS4A8BnRqZrwVNaFeZYj4UzVVVmFgOsr2Zohw09ljqRimniTensMINqfv7QYUaJ05QMxT5eSA0Ou0JaLcw5atAARBxfKL6q0fcAFW+VbI9j7MHCFtVLuP7pGin7GwPbwWdjcnQnEuRpNwDUyK685ttuCmjR16JqZ8FM2EujkzswJMBgm7ONahG9jRGyM1D2DZr89kgtT1OqNcsvuotF3DTrsrWxS96wUzjwuliP1B/jxISZPjdHazZNTPVcQ7Gt75P3Ro2BuJCTJ9Y1U0+SgBy9U1tMZ38ZCS8obqFzAWQ6F1lVhIqjlPq7aNTiF5e0gsS9A/HZQogIIU7lJ9SRnZXAnuwSt1giTnBlPVbCuq+foOAl+VivwPGBWOv70lGcwoEcv46I5u48fPqK8OTHngqpNsT5NjVIRaaJb60yXh2UTGX6lO53fSK9DFy01rRdWZaO30Qk+MyylO21fG/1D3ps4qZnJL7J9vP9IijYx74I4SqG+AMaRrSz++6FdZA7ZsA/QQiFBoaaNksosV7zYDgZHQy4i9x5s/dgKFTcOUtN3CPCRwoM78/w74="
     on_success: always
+    on_failure: always
     template:
       - "**%{repository_slug}, branch: `%{branch}`"
       - "Build <%{build_url}|#%{build_number}>), commit: (%{commit})"
