@@ -4,6 +4,7 @@
   "description": "Dead simple Pomodoro timer",
   "main": "main.js",
   "scripts": {
+    "jsdoc": "jsdoc -c .jsdoc.json",
     "styles": "stylus src/css/style.styl --out src/css/style.min.css --compress",
     "serve": "serve -p 8088",
     "test": "jest"
@@ -13,7 +14,9 @@
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
     "@types/jest": "^24.0.15",
+    "docdash": "^1.1.1",
     "jest": "^24.8.0",
+    "jsdoc": "^3.6.3",
     "serve": "^10.1.2",
     "stylus": "^0.54.5"
   },

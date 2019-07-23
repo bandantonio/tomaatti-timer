@@ -7,6 +7,11 @@ import * as settings from './settings.js';
 let timerID;
 let ticking = true;
 
+/**
+ * Launches a countdown with the passed number of milliseconds
+ * @param {number} milliseconds - the number of milliseconds to start countdown with
+ * @returns {Promise}
+ */
 function countdown(milliseconds) {
   let tickingSound = new Audio('./src/assets/audio/ticking.mp3');
   
@@ -47,18 +52,36 @@ function countdown(milliseconds) {
   }
 }  
 
+/**
+ * Convert minutes to milliseconds
+ * @param {number} minutes - number of minutes to convert
+ * @returns {number} the number of milliseconds in the passed value
+ */
 function minutesToMilliseconds(minutes) {
   return minutes * 60000;
 }
 
+/**
+ * Return the current ID of the countdown timer
+ * @returns {number} id of the countdown timer
+ */
 function getTimeoutID() {
   return timerID;
 }
 
+/**
+ * Return the current state of ticking sound
+ * @returns {boolean} the current state of ticking sound
+ */
 function getTickingState() {
   return ticking;
 }
 
+/**
+ * Enable or disable ticking sound
+ * @param {boolean} state - whether enable or disable ticking sound
+ * @returns {boolean} state of ticking sound that was set
+ */
 function enableTicking(state) {
   ticking = state;
   return ticking;

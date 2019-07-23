@@ -1,0 +1,31 @@
+{
+    "source": {
+        "include": [ "./src/js" ],
+        "includePattern": ".+\\.js(doc|x)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "recurseDepth": 3,
+    "sourceType": "module",
+    "opts": {
+        "template": "node_modules/docdash",
+        "encoding": "utf8",
+        "destination": "docs/",
+        "recurse": true,
+        "verbose": true
+    },
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "docdash": {
+        "static": true,
+        "sort": true,
+        "collapse": true,
+        "wrap": true,
+        "typedefs": true
+    }
+}
