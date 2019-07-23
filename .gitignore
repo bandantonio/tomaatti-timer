@@ -1,4 +1,4 @@
 node_modules
+docs
 package-lock.json
-.vscode
 style.min.css
