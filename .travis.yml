@@ -3,12 +3,12 @@ node_js:
 - stable
 install:
 - npm install
-script:
-  - npm run test:coveralls
-  - npm run test:codecov
 cache:
   directories:
   - node_modules
+after_success:
+  - "cat ${TRAVIS_BUILD_DIR}/coverage/lcov.info | coveralls"
+  - "codecov -f ${TRAVIS_BUILD_DIR}/coverage/lcov.info"
 notifications:
   email: true
   slack:
