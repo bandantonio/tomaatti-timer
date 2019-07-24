@@ -7,13 +7,15 @@
     "jsdoc": "jsdoc -c .jsdoc.json",
     "styles": "stylus src/css/style.styl --out src/css/style.min.css --compress",
     "serve": "serve -p 8088",
-    "test": "jest"
+    "test": "jest",
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "author": "Anton Zolotukhin <zolotuhin87@gmail.com> (https://mister-gold.pro)",
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
     "@types/jest": "^24.0.15",
+    "coveralls": "^3.0.5",
     "docdash": "^1.1.1",
     "jest": "^24.8.0",
     "jsdoc": "^3.6.3",
