@@ -11,9 +11,16 @@
   },
   "author": "Anton Zolotukhin <zolotuhin87@gmail.com> (https://mister-gold.pro)",
   "license": "MIT",
+  "jest": {
+    "coverageReporters": ["text", "lcov"],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
     "@types/jest": "^24.0.15",
+    "codecov": "^3.5.0",
+    "coveralls": "^3.0.5",
     "docdash": "^1.1.1",
     "jest": "^24.8.0",
     "jsdoc": "^3.6.3",
