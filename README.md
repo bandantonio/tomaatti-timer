@@ -1,5 +1,9 @@
 # Tomaatti Timer
 
+[![Build Status](https://travis-ci.com/bandantonio/tomaatti-timer.svg?branch=master)](https://travis-ci.com/bandantonio/tomaatti-timer) |
+[![Maintainability](https://api.codeclimate.com/v1/badges/7c4b6676e0f0f8eda6ce/maintainability)](https://codeclimate.com/github/bandantonio/tomaatti-timer/maintainability) |
+[![devDependencies](https://david-dm.org/bandantonio/tomaatti-timer/dev-status.svg)](https://david-dm.org/bandantonio/tomaatti-timer/dev-status.svg)
+
 Tomaatti (Finnish for tomato) is a Pomodoro timer :tomato: that makes it easier for anyone to get started with the [Pomodoro Technique &reg;](https://francescocirillo.com/pages/pomodoro-technique) .
 
 ## What? :confused: Yet another stupid Pomodoro timer?
