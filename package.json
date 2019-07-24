@@ -7,14 +7,12 @@
     "jsdoc": "jsdoc -c .jsdoc.json",
     "styles": "stylus src/css/style.styl --out src/css/style.min.css --compress",
     "serve": "serve -p 8088",
-    "test": "jest",
-    "test:coveralls": "cat ./test/coverage/lcov.info | coveralls",
+    "test:coveralls": "jest --coverageReporters=text-lcov | coveralls",
     "test:codecov": "codecov"
   },
   "author": "Anton Zolotukhin <zolotuhin87@gmail.com> (https://mister-gold.pro)",
   "license": "MIT",
   "jest": {
-    "coverageReporters": ["text", "lcov"],
     "coverageDirectory": "./test/coverage/",
     "collectCoverage": true
   },
