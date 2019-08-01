@@ -3,6 +3,9 @@ node_js:
 - stable
 install:
 - npm install
+script:
+  - "cat ${TRAVIS_BUILD_DIR}/coverage/lcov.info | coveralls"
+  - "codecov -f ${TRAVIS_BUILD_DIR}/coverage/lcov.info"
 cache:
   directories:
   - node_modules
