@@ -4,6 +4,7 @@ node_js:
 install:
 - npm install
 script:
+  - npm test
   - "cat ${TRAVIS_BUILD_DIR}/coverage/lcov.info | coveralls"
   - "codecov -f ${TRAVIS_BUILD_DIR}/coverage/lcov.info"
 cache:
