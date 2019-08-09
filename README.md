@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.com/bandantonio/tomaatti-timer.svg?branch=master)](https://travis-ci.com/bandantonio/tomaatti-timer)
 [![Maintainability](https://api.codeclimate.com/v1/badges/7c4b6676e0f0f8eda6ce/maintainability)](https://codeclimate.com/github/bandantonio/tomaatti-timer/maintainability)
+[![Documentation coverage](http://inch-ci.org/github/bandantonio/tomaatti-timer.svg)](http://inch-ci.org/github/bandantonio/tomaatti-timer)
 [![codecov](https://codecov.io/gh/bandantonio/tomaatti-timer/branch/master/graph/badge.svg)](https://codecov.io/gh/bandantonio/tomaatti-timer)
 [![Coverage Status](https://coveralls.io/repos/github/bandantonio/tomaatti-timer/badge.svg?branch=master)](https://coveralls.io/github/bandantonio/tomaatti-timer?branch=master)
 [![devDependencies](https://david-dm.org/bandantonio/tomaatti-timer/dev-status.svg)](https://david-dm.org/bandantonio/tomaatti-timer/dev-status.svg)
