@@ -1,0 +1,15 @@
+.github/
+.babelrc
+.gitignore
+.jsdoc.json
+.travis.yml
+
+node_modules/
+coverage/
+showcase/
+test/
+
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
+README.md

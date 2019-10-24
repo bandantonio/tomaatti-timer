@@ -9,9 +9,9 @@
 
 Tomaatti (Finnish for tomato) is a Pomodoro timer :tomato: that makes it easier for anyone to get started with the [Pomodoro Technique &reg;](https://francescocirillo.com/pages/pomodoro-technique) .
 
-## What? :confused: Yet another stupid Pomodoro timer?
+## What? :confused: Yet another Pomodoro timer?
 
-Hey, it's not stupid at all! :grinning:. Just don't hesitate - give it a try. I bet, you will like it!
+Well, yes and no :grinning:. Just don't hesitate - give it a try. I bet, you will like it!
 
 There are not so many projects on GitHub with Pomodoro timers that force you to commit the murder of their authors after several minutes of use. After several days of investigation, I felt like I'm over it and I need something different.
 
@@ -21,26 +21,48 @@ The ultimate goal behind the idea of creating _Tomaatti Timer_ was not "yet anot
 
 ## Getting started
 
-The instructions below will help you to get the copy of the project up and running on your local machine for development and/or teating purposes.
+The instructions below will help you to get the copy of the project up and running on your local machine for development and/or testing purposes.
 
-### Prerequisites
+The simplest and the fastest way to quickstart with the project is to use Docker. If you want more control over the process, you can choose manual deployment option.
+
+### Deploy using Docker
+
+#### Prerequisites
+
+* `Docker` [ [Mac](https://docs.docker.com/docker-for-mac/) | [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/) ]. Docker allows you to spin up isolated runtime environments that can be re-created and reproduced on any machine. There are no more excuses for "It works on my machine!" :wink: If you need a quick introduction to Docker, its basic concepts and commands, feel free to read [this article](https://medium.com/@kelvin_sp/docker-introduction-what-you-need-to-know-to-start-creating-containers-8ffaf064930a).
+
+#### Steps
+
+1. Open your terminal and execute the following command:
+
+    ```bash
+    docker run --rm --name tomaatti-timer -p 5000:5000 bandantonio/tomaatti-timer:1.0
+    ```
+
+1. Open your browser and navigate to `http://localhost:5000`.
+
+Bingo! :tada:
+
+### Deploy manually
+
+#### Prerequisites
 
 1. [`git`](https://git-scm.com). As you are already using GitHub (aren't you? :wink:), I expect you to have git installed on your machine and I also expect that you are familiar with basic `git` commands and flows. If not, feel free check [this guide](https://guides.github.com/activities/hello-world/). 
 1. [`npm`](https://docs.npmjs.com). Node.js package manager is used to install, launch, and manage different packages within the project. If you need more info on how to use npm, check [this guide](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm/).
 
-### Installing
+#### Steps
 
-Open your terminal and execute the following commands:
+1. Open your terminal and execute the following commands:
 
-```bash
-git clone https://github.com/bandantonio/tomaatti-timer.git
-cd tomaatti-timer
-npm i
-npm run styles
-npm run serve
-```
+    ```bash
+    git clone https://github.com/bandantonio/tomaatti-timer.git
+    cd tomaatti-timer
+    npm i
+    npm run styles
+    npm start
+    ```
 
-Open your browser and navigate to `http://localhost:8088`.
+1. Open your browser and navigate to `http://localhost:5000`.
 
 Bingo! :tada:
 
