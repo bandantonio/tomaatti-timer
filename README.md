@@ -29,7 +29,7 @@ The simplest and the fastest way to quickstart with the project is to use Docker
 
 #### Prerequisites
 
-* `Docker` [ [Mac](https://docs.docker.com/docker-for-mac/) | [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/) ]. Docker allows you to spin up isolated runtime environments that can be re-created and reproduced on any machine. There are no more excuses for "It works on my machine!" :wink: If you need a quick introduction to Docker, its basic concepts and commands, feel free to read [this article](https://medium.com/@kelvin_sp/docker-introduction-what-you-need-to-know-to-start-creating-containers-8ffaf064930a).
+1. `Docker` [ [Mac](https://docs.docker.com/docker-for-mac/) | [Linux](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Windows](https://docs.docker.com/docker-for-windows/) ]. Docker allows you to spin up isolated runtime environments that can be re-created and reproduced on any machine. There are no more excuses for "It works on my machine!" :wink: If you need a quick introduction to Docker, its basic concepts and commands, feel free to read [this article](https://medium.com/@kelvin_sp/docker-introduction-what-you-need-to-know-to-start-creating-containers-8ffaf064930a).
 
 #### Steps
 
