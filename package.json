@@ -5,14 +5,17 @@
   "main": "main.js",
   "scripts": {
     "jsdoc": "jsdoc -c .jsdoc.json",
+    "start": "serve -p 5000",
     "styles": "stylus src/css/style.styl --out src/css/style.min.css --compress",
-    "serve": "serve -p 8088",
     "test": "jest"
   },
   "author": "Anton Zolotukhin <zolotuhin87@gmail.com> (https://mister-gold.pro)",
   "license": "MIT",
   "jest": {
-    "coverageReporters": ["text", "lcov"],
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ],
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
   },
@@ -24,7 +27,7 @@
     "docdash": "^1.1.1",
     "jest": "^24.8.0",
     "jsdoc": "^3.6.3",
-    "serve": "^10.1.2",
+    "serve": "^11.2.0",
     "stylus": "^0.54.5"
   },
   "keywords": [
