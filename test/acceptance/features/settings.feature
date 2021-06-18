@@ -7,58 +7,27 @@ Feature: setting
     Background:
         Given the user has browsed to the homepage
 
-    Scenario: user changes the time duration
+    Scenario Outline: user gives valid timer value
         Given the user has opened the settings option
-        When the user sets the cycle duration to ".1" using webUI
-        And the user sets the short break duration to "1" using webUI
-        And the user sets the long break duration to "2" using webUI
-        And the user saves the settings using webUI
-        Then the timer with name "tamatar" should start with cycle duration time ".1"
-        And the message "Break time!" should appear after ".1"
-
-    Scenario: user changes the time duration
-        Given the user has opened the settings option
-        When the user sets the following durations using webUI
-            | cycle      | .1 |
-            | shortBreak | 1  |
-            | longBreak  | 2  |
-        And the user saves the settings using webUI
-        Then the timer should start with following values:
-            | timerName | tamatar |
-            | cycle     | .1      |
-        And the message should appear with following message after given time
-            | message | Break time! |
-            | cycle   | .1          |
-
-
-    Scenario Outline: user changes the time duration
-        Given the user has opened the settings option
-        When the user sets the following durations using webUI
+        When the user saves the following settings using webUI
             | cycle      | <cycle>      |
             | shortBreak | <shortBreak> |
             | longBreak  | <longBreak>  |
-        And the user saves the settings using webUI
-        Then the timer should start with following values:
-            | timerName | <timerName> |
-            | cycle     | <cycle>     |
-        And the message should appear with following message after given time
-            | message | <message> |
-            | cycle   | <cycle>   |
+        Then the countdown should have value "<cycle>"
         Examples:
-            | cycle | shortBreak | longBreak | timerName | message     |
-            | .1    | 1          | 2         | tamatar   | Break time! |
-            | .2    | 2          | 3         | lalu      | Break time! |
+            | cycle | shortBreak | longBreak |
+            | 1     | 2          | 10        |
+            | 1.00  | 2.00       | 10.00     |
 
     Scenario Outline: user gives invalid timer value
         Given the user has opened the settings option
-        When the user sets the following durations using webUI
+        When the user saves the following settings using webUI
             | cycle      | <cycle>      |
             | shortBreak | <shortBreak> |
-            | longBreak  | <longBreak>" |
-        And the user saves the settings using webUI
-        Then the alert should show following message
-            | message | <alertMessage> |
+            | longBreak  | <longBreak>  |
+        Then the alert message "Input must be a number" should pop up
         Examples:
-            | cycle | shortBreak | longBreak | alertMessage           |
-            | ".1"  | "1"        | "2"       | Input must be a number |
-            | ".2"  | "2"        | "3"       | Input must be a number |
+            | cycle | shortBreak | longBreak |
+            | 1:00  | 2          | 10        |
+            | 1     | 2:00       | 10        |
+            | 1     | 2          | 10:00     |

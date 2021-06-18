@@ -7,7 +7,9 @@
     "jsdoc": "jsdoc -c .jsdoc.json",
     "start": "serve -p 5000",
     "styles": "stylus src/css/style.styl --out src/css/style.min.css --compress",
-    "test": "jest"
+    "test": "jest",
+    "test:ui": "cucumber-js --require test/acceptance/cucumber.conf.js --require test/acceptance/stepDefinitions test/acceptance/features --format @cucumber/pretty-formatter",
+    "test:uiPart":"cucumber-js --require test/acceptance/cucumber.conf.js --require test/acceptance/stepDefinitions --format @cucumber/pretty-formatter"
   },
   "author": "Anton Zolotukhin <zolotuhin87@gmail.com> (https://mister-gold.pro)",
   "license": "MIT",
@@ -21,12 +23,17 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
+    "@cucumber/cucumber": "^7.2.1",
+    "@cucumber/pretty-formatter": "^1.0.0-alpha.0",
     "@types/jest": "^24.0.15",
+    "chromedriver": "^91.0.0",
     "codecov": "^3.5.0",
     "coveralls": "^3.0.5",
     "docdash": "^1.1.1",
     "jest": "^24.8.0",
     "jsdoc": "^3.6.3",
+    "nightwatch": "^1.6.4",
+    "nightwatch-api": "^3.0.2",
     "serve": "^11.2.0",
     "stylus": "^0.54.5"
   },

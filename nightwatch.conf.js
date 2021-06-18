@@ -1,15 +1,16 @@
 const LAUNCH_URL = process.env.LAUNCH_URL || "http://localhost:5000/";
 module.exports = {
-  src_folders: ["test"],
+  page_objects_path: "test/acceptance/pageObjects/",
   test_settings: {
     default: {
-      selenium_host: "127.0.0.1",
       launch_url: LAUNCH_URL,
-      globals: {},
       desiredCapabilities: {
         browserName: "chrome",
-        javascriptEnabled: true,
-        chromeOptions: {},
+      },
+      webdriver: {
+        start_process: true,
+        server_path: require("chromedriver").path,
+        port: 4445,
       },
     },
   },
