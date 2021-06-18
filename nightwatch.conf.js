@@ -7,10 +7,10 @@ module.exports = {
       desiredCapabilities: {
         browserName: "chrome",
       },
-      webdriver: {
-        start_process: true,
-        server_path: require("chromedriver").path,
-        port: 4445,
+      selenium: {
+        start_process: false,
+        host:"localhost",
+        port: 4444,
       },
     },
   },
